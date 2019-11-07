@@ -48,12 +48,247 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+/* VARIABLES */
+/* opacity setting for headers */
+@transparency: .7;
+
+/* line spacing for body text */
+@lineheight: 150%;
+
+/* MIXINS */
+/* flex display & center items */
+.flex_center () {
+	display: flex;
+	justify-content: center;
+  }
+
+/* flex display & set as column */
+  .flex_column () {
+	display: flex;
+	flex-direction: column;
+  }
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
+}
+
+body {
+	display: flex;
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+			linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+	@media only screen and (max-width: 500px) {
+				  flex-direction: column;
+			  }
+}
+
+.side_bar {
+	width: 70%;
+	padding: 30px;
+	@media only screen and (max-width: 500px) {
+		width: 100%;
+	}
+}
+
+
+
+/* HEADER IS ON LEFT SIDE FEATURING PIC & FULL NAME */
+header {
+	.flex_column ();
+	color: white;
+	padding-bottom: 30px;
+}
+	/* headshot */
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	/* name */
+	h1 {
+		font-family: 'ZCOOL XiaoWei', serif;
+		color: white;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		.flex_center ();
+		font-size: 2.1rem;
+		}
+	/* "contact & work" */
+	h3 {
+		color: black;
+		background: white;
+		opacity: @transparency;
+		font-family: 'ZCOOL XiaoWei', serif;
+		font-size: 1.2rem;
+		.flex_center ();
+		padding: 15px;
+	}
+
+/* NAVIGATION IS CONTACT LINKS UNDER HEADER IMG / FULL NAME */
+nav {
+	.flex_column ();
+	line-height: @lineheight;
+	a {
+		text-decoration: none;
+		color: #1E4454;
+		font-family: 'Lato', sans-serif;
+		background-color: white;
+		.flex_center ();
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	a:hover {
+		opacity: @transparency;
+	  }
+}
+
+/* SKILLS LISTED ON LEFT*/
+.skills {
+	.flex_column ();
+	h3 {
+		font-family: 'ZCOOL XiaoWei', serif;
+		color: black;
+		background: white;
+		opacity: @transparency;
+		font-size: 1.3rem;
+		.flex_center ();
+		padding: 15px;
+	}
+	p {
+		.flex_center ();
+	}
+}
+
+.digital_skills {
+	font-family: 'Lato', sans-serif;
+	.flex_column ();
+	color: #1E4454;
+	line-height: @lineheight;
+	background-color: white;
+	h4 {
+		.flex_center ();
+		padding: 13px;
+		color:black;
+	}
+}
+
+.written_skills {
+	font-family: 'Lato', sans-serif;
+	.flex_column ();
+	color: black;
+	line-height: @lineheight;
+	background-color: white;
+	padding-bottom: 5%;
+	h4 {
+		.flex_center ();
+		padding: 13px;
+		color:black;
+	}
+}
+
+.main_body {
+	padding: 30px;
+	h3 {
+		color: black;
+		background: white;
+		opacity: @transparency;
+		font-family: 'ZCOOL XiaoWei', serif;
+		margin: 0%;
+		.flex_center ();
+		padding: 15px;
+		font-size: 1.7rem;
+		}
+}
+
+/* WORK EXPERIENCE */
+/* .experience is the main job experience section */
+.experience {
+	.flex_column ();
+	background: white;
+	color: black;
+	padding-left: 20px;
+	padding-right: 40px;
+	margin-right: 0px;
+	margin-bottom: 30px;
+	h3 {
+		font-size: 1.3rem;
+	}
+}
+
+.experience .job {
+	font-family: 'Lato', sans-serif;
+	font-size: .97rem;
+	margin-top: 3%;
+	div {
+		display: flex;
+		justify-content: space-between;
+		h4 {
+			font-family: 'ZCOOL XiaoWei', serif;
+			font-size: 1.2rem;
+			margin: 0%;
+			margin-bottom: .5%;
+			color: black;
+			}
+		p {
+			font-family: 'ZCOOL XiaoWei', serif;
+			margin: 0%;
+			font-size:.9rem;
+			color: black;
+			}
+	}
+	ul {
+		margin-top: 1%;
+		margin-bottom: 2%;
+		color: black;
+		line-height: 130%;
+		}
+}
+
+/* EDUCATION */
+.education {
+	.flex_column ();
+	background: white;
+	color: black;
+	padding-left: 20px;
+	padding-right: 40px;
+	margin-right: 0px;
+	margin-bottom: 7%;
+	h3 {
+		color: white;
+		margin: 0%;
+		.flex_center ();
+	}
+}
+
+.education .school {
+	font-family: 'Lato', sans-serif;
+	font-size: .97rem;
+	margin-top: 3%;
+	div {
+		display: flex;
+		justify-content: space-between;
+		h4 {
+			font-family: 'ZCOOL XiaoWei', serif;
+			font-size: 1.2rem;
+			margin: 0%;
+			margin-bottom: .5%;
+			color: black;
+		}
+		p {
+			font-family: 'ZCOOL XiaoWei', serif;
+			margin: 0%;
+			font-size:.9rem;
+			color: black;
+		}
+	}
+	ul {
+		margin-top: 1%;
+		margin-bottom: 2%;
+		color: black;
+		line-height: 130%;
+		}
 }
 
