@@ -1,1 +1,361 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* VARIABLES */
+/* opacity setting for headers */
+/* line spacing for body text */
+/* MIXINS */
+/* flex display & center items */
+/* flex display & set as column */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+@media only screen and (max-width: 500px) {
+  body {
+    flex-direction: column;
+  }
+}
+.side_bar {
+  width: 70%;
+  padding: 30px;
+}
+@media only screen and (max-width: 500px) {
+  .side_bar {
+    width: 100%;
+  }
+}
+/* HEADER IS ON LEFT SIDE FEATURING PIC & FULL NAME */
+header {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 30px;
+}
+/* headshot */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* name */
+h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 2.1rem;
+}
+/* "contact & work" */
+h3 {
+  color: black;
+  background: white;
+  opacity: 0.7;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+/* NAVIGATION IS CONTACT LINKS UNDER HEADER IMG / FULL NAME */
+nav {
+  display: flex;
+  flex-direction: column;
+  line-height: 150%;
+}
+nav a {
+  text-decoration: none;
+  color: #1E4454;
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+nav a:hover {
+  opacity: 0.7;
+}
+/* SKILLS LISTED ON LEFT*/
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+.skills h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  color: black;
+  background: white;
+  opacity: 0.7;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.skills p {
+  display: flex;
+  justify-content: center;
+}
+.digital_skills {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: #1E4454;
+  line-height: 150%;
+  background-color: white;
+}
+.digital_skills h4 {
+  display: flex;
+  justify-content: center;
+  padding: 13px;
+  color: black;
+}
+.written_skills {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  line-height: 150%;
+  background-color: white;
+  padding-bottom: 5%;
+}
+.written_skills h4 {
+  display: flex;
+  justify-content: center;
+  padding: 13px;
+  color: black;
+}
+.main_body {
+  padding: 30px;
+}
+.main_body h3 {
+  color: black;
+  background: white;
+  opacity: 0.7;
+  font-family: 'ZCOOL XiaoWei', serif;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-size: 1.7rem;
+}
+/* WORK EXPERIENCE */
+/* .experience is the main job experience section */
+.experience {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+}
+.experience h3 {
+  font-size: 1.3rem;
+}
+.experience .job {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.97rem;
+  margin-top: 3%;
+}
+.experience .job div {
+  display: flex;
+  justify-content: space-between;
+}
+.experience .job div h4 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.2rem;
+  margin: 0%;
+  margin-bottom: 0.5%;
+  color: black;
+}
+.experience .job div p {
+  font-family: 'ZCOOL XiaoWei', serif;
+  margin: 0%;
+  font-size: 0.9rem;
+  color: black;
+}
+.experience .job ul {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  color: black;
+  line-height: 130%;
+}
+/* EDUCATION */
+.education {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-right: 0px;
+  margin-bottom: 7%;
+}
+.education h3 {
+  color: white;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+}
+.education .school {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.97rem;
+  margin-top: 3%;
+}
+.education .school div {
+  display: flex;
+  justify-content: space-between;
+}
+.education .school div h4 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.2rem;
+  margin: 0%;
+  margin-bottom: 0.5%;
+  color: black;
+}
+.education .school div p {
+  font-family: 'ZCOOL XiaoWei', serif;
+  margin: 0%;
+  font-size: 0.9rem;
+  color: black;
+}
+.education .school ul {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  color: black;
+  line-height: 130%;
+}
